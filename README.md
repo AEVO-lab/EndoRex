@@ -19,7 +19,7 @@ The arguments are as follows :
 > \
 >--gene_tree GNEWICK, -g GNEWICK \
 >                        Gene tree in newick format. Each leaf must be labeled with 3 parameters separated by a double \
->                        underscore __, as follows : [name]__[species]__[Location] where [name] is an arbitrary \
+>                        underscore __, as follows : [name] __ [species] __ [Location] where [name] is an arbitrary \
 >                        identifier of the gene [species] is the name of the species containing the gene and must be a \
 >                        leaf of the species tree, [location] is either 0 or 1 \
 > \
@@ -49,4 +49,4 @@ The label has the form
 
 >[event]__[location]
 
-where event is in ['Spe', 'Dup', 'Etrf'] and location is in [0, 1]
+where event is in ['Spe', 'Dup', 'Egtf'] and location is in [0, 1]
