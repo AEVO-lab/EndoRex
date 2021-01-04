@@ -49,5 +49,5 @@ The label has the form
 
 >[event]__[location]
 
-where event is in ['Spe', 'Dup', 'Egtf'] and location is in [0, 1]
-Note that transpositions are not shown for the moment.
+where event is in ['Spe', 'Dup', 'Egtf'] and location is in [0, 1].  Here Egtf is an EGT Transfer event.
+The output may also contain unary nodes labeled Egtp that correspond to EGT Transpositions.
