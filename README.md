@@ -11,7 +11,8 @@ A reconciled gene tree is output.
 The arguments are as follows : 
 
 >--species_tree SNEWICK, -s SNEWICK \ 
->                        Species tree in newick format.  Each leaf must have a distinct name. \ \
+>                        Species tree in newick format.  Each leaf must have a distinct name. \
+> \
 >--gene_tree GNEWICK, -g GNEWICK \
 >                        Gene tree in newick format. Each leaf must be labeled with 3 parameters separated by a double \
 >                        underscore __, as follows : [name]__[species]__[Location] where [name] is an arbitrary \
