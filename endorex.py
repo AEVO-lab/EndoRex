@@ -4,13 +4,13 @@ import argparse
 
 
 #example command line
-#python endorex.py -s "(A, B)r;" -g "((((A__0__gA1, A__1__gA2)w, A__0__gA3)x, A__0__gA4)y, B__1__bB1)z;"
+#python endorex.py -s "(A, B)r;" -g "((((A__0__gA1, A__1__gA2)w, A__0__gA3)x, A__0__gA4)y, B__1__gB1)z;"
 
 
 parser = argparse.ArgumentParser(description='EndoRex : Endosymbiotic Reconciliation Software.')
-parser.add_argument('-s', default = '', required = True, dest = 'snewick', help = '''
+parser.add_argument('--species_tree', '-s', required = True, dest = 'snewick', help = '''
                         Species tree in newick format.Each leaf must have a distinct name.''')
-parser.add_argument('-g', default = '', required = True, dest = 'gnewick', help = '''
+parser.add_argument('--gene_tree', '-g', required = True, dest = 'gnewick', help = '''
                         Gene tree in newick format.  Each leaf must be labeled with 3 parameters 
                         separated by a double underscore __, as follows : 
                         [name]__[species]__[Location]
@@ -19,7 +19,22 @@ parser.add_argument('-g', default = '', required = True, dest = 'gnewick', help 
                         [species] is the name of the species containing the gene and must be 
                                   a leaf of the species tree, 
                         [location] is either 0 or 1''')
+                        
+parser.add_argument('--dupcost', '-d', default = 1, dest = 'dupcost', type=float, help = 'Duplication cost')
+parser.add_argument('--losscost', '-l', default = 1, dest = 'losscost', type=float, help = 'Loss cost')
+parser.add_argument('--transfercost01', '-f0', default = 1, dest = 'transfercost01', type=float, help = 'EGT Transfer cost from 0 to 1')
+parser.add_argument('--transfercost10', '-f1', default = 1, dest = 'transfercost10', type=float, help = 'EGT Transfer cost from 1 to 0')
+parser.add_argument('--transpocost01', '-p0', default = 1, dest = 'transpocost01', type=float, help = 'EGT Transposition cost from 0 to 1')
+parser.add_argument('--transpocost10', '-p1', default = 1, dest = 'transpocost10', type=float, help = 'EGT Transposition cost from 1 to 0')
+
+                        
 args = parser.parse_args()
+
+
+dupcost = args.dupcost 
+losscost = args.losscost
+transfercosts = [args.transfercost01, args.transfercost10]
+transpocosts = [args.transpocost01, args.transpocost10]
 
 
 
@@ -145,10 +160,12 @@ class DELCostInfo:
     #self.D[x, bx, ev]['origins'] is an array of pairs (bl, br), each pair meaning that it is possible to get an opt solution 
     #                             for x, bx and ev such that children are assigned bl and br, respectively
     
-    def __init__(self, gene_tree, species_tree):
+    def __init__(self, gene_tree, species_tree, lca_map, leaf_bx):
         self.D = defaultdict(dict)
         self.gene_tree = gene_tree 
         self.species_tree = species_tree
+        self.lca_map = lca_map
+        self.leaf_bx = leaf_bx
         
     def set_cost_info(self, x, bx, evtype, cost, origins):
         self.D[x, bx, evtype] = {'cost' : cost, 'origins' : origins}
@@ -202,14 +219,35 @@ class DELCostInfo:
             
             origin = self.D[x, bx, ev]['origins'][0]    #only return first solution 
             
+            b = {}
+            bnodes = {}
+            
             for i in range(len(x.children)):
-                b = origin[i]
-                bev = self.get_best_event(x.children[i], b)
-                bnode = self.get_reconciliation_rec(x.children[i], b, bev)
-                node.add_child(bnode)
+                b[i] = origin[i]
+                bev = self.get_best_event(x.children[i], b[i])
+                bnodes[i] = self.get_reconciliation_rec(x.children[i], b[i], bev)
             
             
-            #TODO : add transposition?
+            #a bunch of checks for transpositions
+            if ev == 'Spe' or ev == 'Dup':
+                for i in range(len(x.children)):
+                    if b[i] != bx:
+                        child_tr = Node(content = 'Egtp')
+                        node.add_child(child_tr)
+                        child_tr.add_child(bnodes[i])
+                    else:
+                        node.add_child(bnodes[i])
+            else:   #Egtf
+                if (b[0] != bx and b[1] != bx) or (b[0] == bx and b[1] == bx):
+                    child_tr = Node(content = 'Egtp')
+                    node.add_child(child_tr)
+                    child_tr.add_child(bnodes[0])
+                    node.add_child(bnodes[1])
+                else:   #exactly one is different --> no transpo needed
+                    node.add_child(bnodes[0])
+                    node.add_child(bnodes[1])
+                    
+            
             return node
         
         
@@ -238,9 +276,10 @@ def parse_genetree_info(genetree, speciestree):
 
 
 def compute_delrecon(gene_tree, species_tree, dupcost, losscost, trfcosts, trpcosts):
-    delinfo_before = DELCostInfo(gene_tree, species_tree)
     
     (lca_map, leaf_bx) = parse_genetree_info(gene_tree, species_tree)
+    
+    delinfo_before = DELCostInfo(gene_tree, species_tree, lca_map, leaf_bx)
         
     delinfo = compute_delrecon_rec(gene_tree, species_tree, lca_map, leaf_bx, delinfo_before, dupcost, losscost, trfcosts, trpcosts)
     
@@ -346,7 +385,7 @@ species_tree = Node.from_newick(args.snewick)
 gene_tree = Node.from_newick(args.gnewick)
    
 
-reconciled_tree = compute_delrecon(gene_tree, species_tree, 1, 1, [1, 1], [1, 1])
+reconciled_tree = compute_delrecon(gene_tree, species_tree, dupcost, losscost, transfercosts, transpocosts)
 
 print(reconciled_tree.to_newick())
     
