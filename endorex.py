@@ -6,6 +6,9 @@ import argparse
 #example command line
 #python endorex.py -s "(A, B)r;" -g "((((A__0__gA1, A__1__gA2)w, A__0__gA3)x, A__0__gA4)y, B__1__gB1)z;"
 
+#to get full info on losses, add --lossmode=full (or partial, see the help)
+#python endorex.py -s "((A, B)x, C)y;" -g "((A__0__ga1, C__0__gc1)w, B__1__gb1)r;" --lossmode=full
+
 
 parser = argparse.ArgumentParser(description='EndoRex : Endosymbiotic Reconciliation Software.')
 parser.add_argument('--species_tree', '-s', required = True, dest = 'snewick', help = '''
@@ -26,7 +29,11 @@ parser.add_argument('--transfercost01', '-f0', default = 1, dest = 'transfercost
 parser.add_argument('--transfercost10', '-f1', default = 1, dest = 'transfercost10', type=float, help = 'EGT Transfer cost from 1 to 0')
 parser.add_argument('--transpocost01', '-p0', default = 1, dest = 'transpocost01', type=float, help = 'EGT Transposition cost from 0 to 1')
 parser.add_argument('--transpocost10', '-p1', default = 1, dest = 'transpocost10', type=float, help = 'EGT Transposition cost from 1 to 0')
-
+parser.add_argument('--lossmode', '-lm', default="none", help = '''
+                        How losses should be displayed, must be one of [none, partial, full].  
+                        none : no info on losses is shown.  
+                        partial : internal nodes that appear as losses are shown, but not the lost leaves.  
+                        full : leaves are also present.''') 
                         
 args = parser.parse_args()
 
@@ -35,12 +42,12 @@ dupcost = args.dupcost
 losscost = args.losscost
 transfercosts = [args.transfercost01, args.transfercost10]
 transpocosts = [args.transpocost01, args.transpocost10]
-
+loss_mode = args.lossmode
 
 
 class Node:
     
-    def __init__(self, content=None, parent=None, children=None, ID=None):
+    def __init__(self, content=None, parent=None, children=None):
         self.content = content
         self.parent = parent
         self.children = children or []
@@ -81,7 +88,7 @@ class Node:
         else:
             ls = [node.to_newick() for node in self.children]
             s = ','.join(ls)
-            return '(' + s + ')' + self.content + (';' if self.is_root() else '')
+            return '(' + s + ')' + (self.content if self.content != None else '') + (';' if self.is_root() else '')
             
             
 
@@ -151,6 +158,26 @@ class Node:
             low_node = low_node.parent
             cpt += 1
         return cpt
+        
+    def get_child_incomparable_with(self, descendant):
+        
+        cur = descendant.parent 
+        prev = descendant 
+        
+        while cur != self and not cur.is_root():
+            prev = cur
+            cur = cur.parent 
+           
+        if cur != self:
+            print("Error in get_child_incomparable_with : descendant is not acutally a descendant of self")
+            return None 
+        
+        for c in self.children:
+            if c != prev:
+                return c
+                
+        print("Error in get_child_incomparable_with : no child is incomparable")
+        return None
 
 
 class DELCostInfo:
@@ -190,7 +217,7 @@ class DELCostInfo:
             bev = 'Egtf'
         return bev
         
-    def get_reconciliation(self):
+    def get_reconciliation(self, loss_mode):
         #performs backtracking on the gene tree
         #TODO : add unary nodes for Egtr
         x = self.gene_tree
@@ -203,13 +230,13 @@ class DELCostInfo:
         bx = 0 if self.get_min_cost(x, 0) < self.get_min_cost(x, 1) else 1
         ev = bev[bx]
         
-        return self.get_reconciliation_rec(x, bx, ev) 
+        return self.get_reconciliation_rec(x, bx, ev, loss_mode) 
         
         
     #For backtracking.  We make a copy of self.genetree along the way and return it.
     #Parent knows which bx and event to use on x, here we must figure what to call children on
-    def get_reconciliation_rec(self, x, bx, ev):
-        node = Node()   #will end up being a copy of x
+    def get_reconciliation_rec(self, x, bx, ev, loss_mode):
+        node = Node()   #will is a copy of x
         
         if x.is_leaf():
             node.content = x.content
@@ -220,33 +247,67 @@ class DELCostInfo:
             origin = self.D[x, bx, ev]['origins'][0]    #only return first solution 
             
             b = {}
-            bnodes = {}
+            child_subtrees = {}
+            
+            lastnodes = {}  #for each child of x, we create a chain for losses + transpos, and lastnodes[i] has the last node on that chain
             
             for i in range(len(x.children)):
                 b[i] = origin[i]
                 bev = self.get_best_event(x.children[i], b[i])
-                bnodes[i] = self.get_reconciliation_rec(x.children[i], b[i], bev)
+                child_subtrees[i] = self.get_reconciliation_rec(x.children[i], b[i], bev, loss_mode)
+                lastnodes[i] = node
             
+            
+            #add losses if required 
+            if loss_mode in ['partial', 'full']:
+                for i in range(len(x.children)):
+                    c = x.children[i]
+                    sp_c = self.lca_map[c]
+                    sp_x = self.lca_map[x]
+                    
+                    cur = sp_c
+                    
+                    while (ev == 'Spe' and cur.parent != sp_x) or (ev != 'Spe' and cur != sp_x):
+                        
+                        cur = cur.parent
+                        
+                        loss_internal_node = Node(content = 'L')
+                        
+                        #print('here c=' + sp_c.content + ' x=' + sp_x.content + ' cur=' + cur.content + ' ev=' + ev)
+                        lastnodes[i].add_child(loss_internal_node)
+                        lastnodes[i] = loss_internal_node
+                        
+                        #add the lost leaf and its species label
+                        if loss_mode == 'full':
+                            loss_leaf = Node()
+                            sp_loss = cur.get_child_incomparable_with(sp_c)
+                            loss_leaf.content = 'loss_' + sp_loss.content
+                            loss_internal_node.add_child(loss_leaf)
+                
+                    
+                    
             
             #a bunch of checks for transpositions
             if ev == 'Spe' or ev == 'Dup':
                 for i in range(len(x.children)):
                     if b[i] != bx:
                         child_tr = Node(content = 'Egtp')
-                        node.add_child(child_tr)
-                        child_tr.add_child(bnodes[i])
+                        lastnodes[i].add_child(child_tr)
+                        child_tr.add_child(child_subtrees[i])
                     else:
-                        node.add_child(bnodes[i])
+                        lastnodes[i].add_child(child_subtrees[i])
             else:   #Egtf
                 if (b[0] != bx and b[1] != bx) or (b[0] == bx and b[1] == bx):
                     child_tr = Node(content = 'Egtp')
-                    node.add_child(child_tr)
-                    child_tr.add_child(bnodes[0])
-                    node.add_child(bnodes[1])
+                    lastnodes[0].add_child(child_tr)
+                    child_tr.add_child(child_subtrees[0])
+                    lastnodes[1].add_child(child_subtrees[1])
                 else:   #exactly one is different --> no transpo needed
-                    node.add_child(bnodes[0])
-                    node.add_child(bnodes[1])
-                    
+                    lastnodes[0].add_child(child_subtrees[0])
+                    lastnodes[1].add_child(child_subtrees[1])
+            
+                   
+            
             
             return node
         
@@ -275,7 +336,7 @@ def parse_genetree_info(genetree, speciestree):
 
 
 
-def compute_delrecon(gene_tree, species_tree, dupcost, losscost, trfcosts, trpcosts):
+def compute_delrecon(gene_tree, species_tree, dupcost, losscost, trfcosts, trpcosts, loss_mode):
     
     (lca_map, leaf_bx) = parse_genetree_info(gene_tree, species_tree)
     
@@ -283,7 +344,7 @@ def compute_delrecon(gene_tree, species_tree, dupcost, losscost, trfcosts, trpco
         
     delinfo = compute_delrecon_rec(gene_tree, species_tree, lca_map, leaf_bx, delinfo_before, dupcost, losscost, trfcosts, trpcosts)
     
-    return delinfo.get_reconciliation()
+    return delinfo.get_reconciliation(loss_mode)
     
                 
 def compute_delrecon_rec(x, species_tree, lca_map, leaf_bx, delinfo, dupcost, losscost, trfcosts, trpcosts):
@@ -385,7 +446,7 @@ species_tree = Node.from_newick(args.snewick)
 gene_tree = Node.from_newick(args.gnewick)
    
 
-reconciled_tree = compute_delrecon(gene_tree, species_tree, dupcost, losscost, transfercosts, transpocosts)
+reconciled_tree = compute_delrecon(gene_tree, species_tree, dupcost, losscost, transfercosts, transpocosts, loss_mode)
 
 print(reconciled_tree.to_newick())
     
