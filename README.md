@@ -44,6 +44,7 @@ The arguments are as follows :
 > \
 >--transpocost10 TRANSPOCOST10, -p1 TRANSPOCOST10 \
 >                        EGT Transposition cost from 1 to 0 \
+> \
 >--lossmode LOSSMODE, -lm LOSSMODE \
 >                        How losses should be displayed, must be one of [none, partial, full]. \
 >                        none : no info on losses is shown. \
