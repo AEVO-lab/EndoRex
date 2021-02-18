@@ -1,0 +1,91 @@
+
+
+This is RAxML version 8.2.4 released by Alexandros Stamatakis on October 02 2015.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+
+Alignment has 191 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 37.02%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heteorgeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 191
+Name: No Name Provided
+DataType: AA
+Substitution Matrix: AUTO
+Using fixed base frequencies
+
+
+
+
+RAxML was called as follows:
+
+/usr/bin/raxmlHPC-PTHREADS-AVX -T 2 -m PROTGAMMAAUTO -p 123456 -s /home/local/USHERBROOKE/ansy1901/Bureau/EGT_reconciliation/MitoCOGs/dataset/11_Plantae_dataset/RESULTS/MSA/MitoCOG0053.phylip -w /home/local/USHERBROOKE/ansy1901/Bureau/EGT_reconciliation/MitoCOGs/dataset/11_Plantae_dataset/RESULTS/TREE/RAxML/PROTGAMMAAUTO -n MitoCOG0053 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.087 0.044 0.039 0.057 0.019 0.037 0.058 0.083 0.024 0.048 0.086 0.062 0.020 0.038 0.046 0.070 0.061 0.014 0.035 0.071 
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: LG likelihood -2066.616978 with empirical base frequencies
+
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: RTREV likelihood -2062.697915 with empirical base frequencies
+
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: RTREV likelihood -2056.285789 with empirical base frequencies
+
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: RTREV likelihood -2055.500033 with empirical base frequencies
+
+
+Inference[0]: Time 9.205485 GAMMA-based likelihood -2055.269606, best rearrangement setting 5
+alpha[0]: 2.723212 
+
+
+Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: RTREV likelihood -2055.269608 with empirical base frequencies
+
+
+Inference[0] final GAMMA-based Likelihood: -2055.230564 tree written to file /home/local/USHERBROOKE/ansy1901/Bureau/EGT_reconciliation/MitoCOGs/dataset/11_Plantae_dataset/RESULTS/TREE/RAxML/PROTGAMMAAUTO/RAxML_result.MitoCOG0053
+
+
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -2055.230564 .... 
+
+Final GAMMA-based Score of best tree -2055.230564
+
+Program execution info written to /home/local/USHERBROOKE/ansy1901/Bureau/EGT_reconciliation/MitoCOGs/dataset/11_Plantae_dataset/RESULTS/TREE/RAxML/PROTGAMMAAUTO/RAxML_info.MitoCOG0053
+Best-scoring ML tree written to: /home/local/USHERBROOKE/ansy1901/Bureau/EGT_reconciliation/MitoCOGs/dataset/11_Plantae_dataset/RESULTS/TREE/RAxML/PROTGAMMAAUTO/RAxML_bestTree.MitoCOG0053
+
+Overall execution time: 11.318722 secs or 0.003144 hours or 0.000131 days
+

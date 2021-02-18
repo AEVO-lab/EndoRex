@@ -1,0 +1,11 @@
+Chlamydomonas reinhardtii,3055,cellular organisms; Eukaryota; Viridiplantae; Chlorophyta; Chlorophyceae; Chlamydomonadales; Chlamydomonadaceae; Chlamydomonas
+Arabidopsis thaliana,3702,cellular organisms; Eukaryota; Viridiplantae; Streptophyta; Streptophytina; Embryophyta; Tracheophyta; Euphyllophyta; Spermatophyta; Magnoliophyta; Mesangiospermae; eudicotyledons; Gunneridae; Pentapetalae; rosids; malvids; Brassicales; Brassicaceae; Camelineae; Arabidopsis
+Sorghum bicolor,4558,cellular organisms; Eukaryota; Viridiplantae; Streptophyta; Streptophytina; Embryophyta; Tracheophyta; Euphyllophyta; Spermatophyta; Magnoliophyta; Mesangiospermae; Liliopsida; Petrosaviidae; commelinids; Poales; Poaceae; PACMAD clade; Panicoideae; Andropogoneae; Sorghum
+Vitis vinifera,29760,cellular organisms; Eukaryota; Viridiplantae; Streptophyta; Streptophytina; Embryophyta; Tracheophyta; Euphyllophyta; Spermatophyta; Magnoliophyta; Mesangiospermae; eudicotyledons; Gunneridae; Pentapetalae; rosids; rosids incertae sedis; Vitales; Vitaceae; Vitis
+Oryza sativa Japonica Group,39947,cellular organisms; Eukaryota; Viridiplantae; Streptophyta; Streptophytina; Embryophyta; Tracheophyta; Euphyllophyta; Spermatophyta; Magnoliophyta; Mesangiospermae; Liliopsida; Petrosaviidae; commelinids; Poales; Poaceae; BEP clade; Ehrhartoideae; Oryzeae; Oryza; Oryza sativa
+Ostreococcus tauri,70448,cellular organisms; Eukaryota; Viridiplantae; Chlorophyta; Mamiellophyceae; Mamiellales; Bathycoccaceae; Ostreococcus
+Selaginella moellendorffii,88036,cellular organisms; Eukaryota; Viridiplantae; Streptophyta; Streptophytina; Embryophyta; Tracheophyta; Lycopodiidae; Selaginellales; Selaginellaceae; Selaginella
+Physcomitrella patens,3218,cellular organisms; Eukaryota; Viridiplantae; Streptophyta; Streptophytina; Embryophyta; Bryophyta; Bryophytina; Bryopsida; Funariidae; Funariales; Funariaceae; Physcomitrella
+Micromonas sp. RCC299,296587,cellular organisms; Eukaryota; Viridiplantae; Chlorophyta; Mamiellophyceae; Mamiellales; Mamiellaceae; Micromonas
+Cyanophora paradoxa,2762,cellular organisms; Eukaryota; Glaucocystophyceae; Cyanophoraceae; Cyanophora
+Cyanidioschyzon merolae,45157,cellular organisms; Eukaryota; Rhodophyta; Bangiophyceae; Cyanidiales; Cyanidiaceae; Cyanidioschyzon

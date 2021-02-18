@@ -1,0 +1,6 @@
+speciestree
+b.b
+doesnotexist
+b.nb
+nb.b
+nb.nb

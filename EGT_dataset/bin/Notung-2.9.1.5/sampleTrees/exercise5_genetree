@@ -1,0 +1,3 @@
+(((rat-gene-A, mouse-gene-A):56,(pan-gene-A, mac-gene-A, human-gene-A):70):100
+, (mac-gene-AA,
+(mouse-gene-B, mac-gene-BB1, human-gene-BB2, mac-gene-BB2, human-gene-BB1,((pan-gene-BA2,pan-gene-BA1):97,(human-gene-BA6,(human-gene-BA5,human-gene-BA4):86):78,(human-gene-BA3,human-gene-BA2,human-gene-BA1):76, mac-gene-BA):73):98):92):94;

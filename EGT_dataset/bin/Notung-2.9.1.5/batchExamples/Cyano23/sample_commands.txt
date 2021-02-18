@@ -1,0 +1,46 @@
+######
+
+#  To run the following commands, replace "Notung-2.9.jar" with the
+#  name of the version included in this distribution, including the
+#  build and revision designators.  For example, for the
+#  Notung-2.9.1.4 distribution replace "Notung-2.9.jar" with
+#  "Notung-2.9.1.4.jar".
+#
+#  Note that these commands are designed for execution from the
+#  Cyano23 directory and assume the directory structure used in the
+#  distribution.  If the Notung-2.9.*.*.jar file has been moved to
+#  another directory, the path must be updated accordingly.
+#
+#  These commands include path names in a format appropriate for linux
+#  and MacOS.  Many Windows systems use back slashes in path names.
+#  If you are running on windows, change "../../" to "..\..\"
+#
+
+######
+
+
+
+#######################################
+# phylogenomics analysis with transfers and a binary species tree
+
+java -jar ../../Notung-2.9.jar -b batch-binary.txt --reconcile --speciestag prefix --outputdir BinaryPhylo_DTL --log --infertransfers true --phylogenomics
+
+
+#######################################
+# phylogenomics analysis with duplication and loss only, binary species tree
+
+java -jar ../../Notung-2.9.jar -b batch-binary.txt --reconcile --speciestag prefix --outputdir BinaryPhylo_DL --log --phylogenomics
+
+
+#######################################
+# phylogenomics analysis with transfers and a non-binary species tree
+
+java -jar ../../Notung-2.9.jar -b batch-nonBinary.txt --reconcile --speciestag prefix --outputdir NonBinaryPhylo_DTL --log --infertransfers true --phylogenomics
+
+
+#######################################
+# rooting analysis with transfers and a binary species tree
+
+java -jar ../../Notung-2.9.jar -b batch-binary.txt --root --speciestag prefix --outputdir BinaryRooted_DTL --log --infertransfers true 
+
+

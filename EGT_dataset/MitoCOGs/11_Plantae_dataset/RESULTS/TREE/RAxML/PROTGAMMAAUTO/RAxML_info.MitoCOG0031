@@ -1,0 +1,101 @@
+
+
+IMPORTANT WARNING: Sequences Sorghum_bicolor__0__115278548 and Oryza_sativa_Japonica_Group__0__194033225 are exactly identical
+
+IMPORTANT WARNING
+Found 1 sequence that is exactly identical to other sequences in the alignment.
+Normally they should be excluded from the analysis.
+
+An alignment file with sequence duplicates removed has already
+been printed to file /home/local/USHERBROOKE/ansy1901/Bureau/EGT_reconciliation/MitoCOGs/dataset/11_Plantae_dataset/RESULTS/MSA/MitoCOG0031.phylip.reduced
+
+
+This is RAxML version 8.2.4 released by Alexandros Stamatakis on October 02 2015.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+
+Alignment has 298 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 15.95%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heteorgeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 298
+Name: No Name Provided
+DataType: AA
+Substitution Matrix: AUTO
+Using fixed base frequencies
+
+
+
+
+RAxML was called as follows:
+
+/usr/bin/raxmlHPC-PTHREADS-AVX -T 2 -m PROTGAMMAAUTO -p 123456 -s /home/local/USHERBROOKE/ansy1901/Bureau/EGT_reconciliation/MitoCOGs/dataset/11_Plantae_dataset/RESULTS/MSA/MitoCOG0031.phylip -w /home/local/USHERBROOKE/ansy1901/Bureau/EGT_reconciliation/MitoCOGs/dataset/11_Plantae_dataset/RESULTS/TREE/RAxML/PROTGAMMAAUTO -n MitoCOG0031 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.087 0.044 0.039 0.057 0.019 0.037 0.058 0.083 0.024 0.048 0.086 0.062 0.020 0.038 0.046 0.070 0.061 0.014 0.035 0.071 
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: CPREV likelihood -4240.132146 with empirical base frequencies
+
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: CPREV likelihood -4238.054875 with empirical base frequencies
+
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: CPREV likelihood -4238.044272 with empirical base frequencies
+
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: CPREV likelihood -4238.044215 with empirical base frequencies
+
+
+Inference[0]: Time 8.109211 GAMMA-based likelihood -4238.044215, best rearrangement setting 5
+alpha[0]: 0.769078 
+
+
+Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: CPREV likelihood -4238.044215 with empirical base frequencies
+
+
+Inference[0] final GAMMA-based Likelihood: -4238.044215 tree written to file /home/local/USHERBROOKE/ansy1901/Bureau/EGT_reconciliation/MitoCOGs/dataset/11_Plantae_dataset/RESULTS/TREE/RAxML/PROTGAMMAAUTO/RAxML_result.MitoCOG0031
+
+
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -4238.044215 .... 
+
+Final GAMMA-based Score of best tree -4238.044215
+
+Program execution info written to /home/local/USHERBROOKE/ansy1901/Bureau/EGT_reconciliation/MitoCOGs/dataset/11_Plantae_dataset/RESULTS/TREE/RAxML/PROTGAMMAAUTO/RAxML_info.MitoCOG0031
+Best-scoring ML tree written to: /home/local/USHERBROOKE/ansy1901/Bureau/EGT_reconciliation/MitoCOGs/dataset/11_Plantae_dataset/RESULTS/TREE/RAxML/PROTGAMMAAUTO/RAxML_bestTree.MitoCOG0031
+
+Overall execution time: 10.984365 secs or 0.003051 hours or 0.000127 days
+

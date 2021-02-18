@@ -1,0 +1,8 @@
+(
+ (
+  (((gHat_X,g_Y)1,g_Z)2,
+  (gPrime_Y,gPrime_Z)3)4,
+  (g_W,g_X)5
+ )6,
+ g_V
+)7;

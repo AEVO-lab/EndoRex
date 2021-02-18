@@ -1,0 +1,161 @@
+ 22 338
+Sorghum_bicolor__1__242049094              -----MLRRT LPALRSVKDG AAGQAGKVDA HFPSLRGHPA ARANA--REA
+Oryza_sativa_Japonica_Group__1__115478849  ----MILRRT LPRLASAKDG SGGGFA--DG HFPSLRGHPA ARANA--RDA
+Vitis_vinifera__1__359496358               -----MLKRW IRHGYKKVAG LFSKADTRTK RFPVLEGHPL AQEHA--EAA
+Arabidopsis_thaliana__1__30698100          MSSVLRLLGR RICNPAAEKV RLSSSLSGGG DFPILNGHKA AQDLS--KDT
+Chlamydomonas_reinhardtii__1__159476382    ---MLPSLLT NARRGAQAAL QPGFLSAFIS TTSESLNAAA TATAS--KPA
+Ostreococcus_tauri__1__308811801           -----MLAHA RRKLARELGG RLATTATVHG TR---REGQR ACVSS--SSA
+Selaginella_moellendorffii__1__302802851   ---------- ---------- ---------- --------ML SRVLG--RKC
+Selaginella_moellendorffii__1__302812044   ---------- ---------- ---------- --------ML SRVLG--RKC
+Selaginella_moellendorffii__1__302792451   ---------- ---------- ---------- ---------- ----------
+Selaginella_moellendorffii__1__302766675   ---------- ---------- ---------- --------ML SRVLG--SKR
+Selaginella_moellendorffii__1__302765961   ---------- ---------- ---------- --------ML SRVLG--SKR
+Cyanidioschyzon_merolae__0__8954361        ---------- ---------- ------MKIK NFFLNFNRKS VQNNN--SLN
+Cyanophora_paradoxa__1__intID2000030605    ---------- ---------- ---------- ---------- ----------
+Oryza_sativa_Japonica_Group__1__115474559  ---MAAAALL RRSPAARALL SPALSSRLVA SKPHSSSPAP PPPPS--KA-
+Physcomitrella_patens__1__168064341        ---------- ---------- ---------- ---------- ----------
+Vitis_vinifera__1__225452228               -----MATGL LRRGMSRVPG Q---AAKLLR SRAHATGAQS SEVNS--EV-
+Arabidopsis_thaliana__1__15232149          -----MASGL IGRLVGTKPS KLATAARLIP ARWTSTGAEA ETKAS--SGG
+Arabidopsis_thaliana__1__15237464          -----MAFGL IGRVVGTKSS RLSTAARLIP ARWTSTG-SE AQSKA--STG
+Selaginella_moellendorffii__1__302795957   ---------- ---------- ---------- ---------- ----------
+Selaginella_moellendorffii__1__302813399   ---------- ---------- ---------- ---------- ----------
+Selaginella_moellendorffii__1__302763777   ---------- ---------- ---------- -MPKLREARP AAELESLKHV
+Selaginella_moellendorffii__1__302790784   ---------- ---------- ---------- ---------- ----------
+
+                                           AEGQARLSAE EEDRRKRDGR ATTTV----- --KEFQVYRW NPDSPAGRPF
+                                           AEKQAALAAK EEEIRDHRRG DAAAASPAPS TVKEFRVYRW SPDAPSRRPH
+                                           VETQGTIQEN LNALK----- ---------- --KEFQIYRW NPDFPNTKPH
+                                           LKSQDITKEK EGQHK----- ---------E VKKEFKIYRW NPDKPNSKPF
+                                           PSRPPLAKPP LY-------- ---------- --KEFQIYRW NPDSDE-KPK
+                                           SRGKEI---- ---------- ---------- --QRFKVYRW NPDSGE-EPR
+                                           STSNAL---- ---------- ---------- --RSFQVYRY NPQDGK-SPH
+                                           STSNAL---- ---------- ---------- --RSFQVYRY NPQDGK-SPH
+                                           ---------- ---------- ---------- ---------- --------PC
+                                           LTSNGL---- ---------- ---------- --RSFQVYRY NPQDGK-SPH
+                                           LTSNGL---- ---------- ---------- --RSFQVYRY NPQDGK-SPH
+                                           HFDLSY---- ---------- ---------- --RVFRIYRW NPSIMK-NPW
+                                           ---------- ---------- ---------- ---------- ----------
+                                           --GANT---- ---------- ---------- --KTFSIYRW DPDSPSTKPH
+                                           ----NI---- ---------- ---------- --KKFSIYRW SPDSSE-KPY
+                                           --AKTL---- ---------- ---------- --KTFSIYRW NPDNPS-KPE
+                                           GRGSNL---- ---------- ---------- --KTFQIYRW NPDNPG-KPE
+                                           GGGASL---- ---------- ---------- --KTFQIYRW NPDNPG-KPE
+                                           -KSSNI---- ---------- ---------- --KEFSIYRW NPDGSS-NPQ
+                                           -KSSNI---- ---------- ---------- --KEFSIYRW NPDGSS-NPQ
+                                           PKPPNM---- ---------- ---------- --KSLAIYRW DPDNTGKKPS
+                                           ----NM---- ---------- ---------- --KSFAIYRW DPDNTRKKPS
+
+                                           LQSYLVDLAS CGPMVLDVLQ KIKAEQDSTL AFRRSCREGI CGSCSMSIDG
+                                           LQSYHVDLAT CGPMVLDVLQ KIKAEHDATL AFRRSCREGI CGSCSMCIDG
+                                           LQSYFVDLST CGPMVLDALQ KIKAEEDSSL SYRRSCREGI CGSCAMNIDG
+                                           LQSFFVDLSS CGPMVLDVLQ KIKAEDDASL SYRRSCREGI CGSCSMNIDG
+                                           YASYQVDINN CGPMMLDVLL KIKDEQDQTL SLRRSCREGI CGSCAMNIDG
+                                           YKTYDVDVGE CGPMMLDVLF KIKDEQDQTL SFRRSCREGI CGSCAMNING
+                                           LQDYKVDTSN C-VMMLDVLL EIKNKHDSGL TFRRSCREGV CGSCAMNING
+                                           LQDYKVDTSN C-VMMLDVLL EIKNKHDSSL TFRRSCREGV CGSCAMNING
+                                           LQEYKVDTSN C-VMMLDVLF EIKNKHDSSI TFRRSCRKGV CGSCAMNING
+                                           LQEYKVDISN C-VMMLDVLF EIKNKHDSSI TFRRSCREGV CGSCAMNING
+                                           LQEYKVDTSN C-VMMLDVLF EIKNKHDSSI TFRRSCREGV CGSCAMNING
+                                           INSYIVSMNN CGPIVLDALI KIKNEQDSTL TFRRSCREGI CGSCAINIIG
+                                           ---------- ---MVLDALL KIKNELDPTL TFRRSCREGI CGSCAMNING
+                                           LKDYKVDLSD CGPMVLDVLL KIKNEQDPSL TFRRSCREGI CGSCAMNIDG
+                                           LKTYSINTNE CGPMVLDALI KIKNEIDTGL TFRRSCREGI CGSCAMNIGG
+                                           LQNYQINLKD CGPMVLDALI KIKNEMDPTL TFRRSCREGI CGSCAMNIDG
+                                           LQNYQIDLKD CGPMVLDALI KIKNEMDPSL TFRRSCREGI CGSCAMNIDG
+                                           LQDYKIDLKD CGPMVLDALI KIKNEMDPSL TFRRSCREGI CGSCAMNIDG
+                                           QQVYKIDLNE CGPMVLDALI KIKNEVDQGL TFRRSCREGI CGSCAMNING
+                                           QQVYKIDLND CGPMVLDALI KIKNEVDQGL TFRRSCREGI CGSCAMNING
+                                           LQVYSLNTND CGPMVLDALI KIKNEMDPTL TFRRSCREGI CGSCAMNING
+                                           LQVYSLNTND CGPMVLDALI KIKNEMDPTL TFRRSCREGI CGSCAMNING
+
+                                           VNTVACLKPV DADTSR--PS MVTPLPHMYV VKDLVVDLTN FYQQ--YRSV
+                                           VNTVACLRPV DTDTSS--AT TVTPLPHMYV VRDLVVDLTS FYQQ--YKSV
+                                           TNTVACLRPI DADTTK--PT TITPLPHMFA IKDLWINVMT YIHACIYRSI
+                                           TNTVACLKPI NPNTSK--PT IITPLPHMYV IKDLVVDLTN FYQQ--YKSM
+                                           SNTLACLCKV NRDPGH--VG KVAPLPHMFV VKDLVVDMAN FYAQ--YKSI
+                                           KNGLACLTKV DRGQSG--DQ TIAPLPHMFV VRDLVVDMAN FYAQ--YKSI
+                                           KNCLACLTKV GRDEGGIAST VVLPLPHMFV IKDLVVDMTH FYQQ--YKSI
+                                           KNCLACLTKV GRDEDGIAST VVLPLPHMFV IKDLVVDMTH FYQQ--YKSI
+                                           KNCLACLTKV DRDEDGIAST VVLPLPHMFV IKDLVVDMSY FYQQ--YKSI
+                                           KNCLACLTKV DRDEDGIAST VVLPLPHMFV IKDLVVDMTY FYQQ--YKSI
+                                           KNCLACLTKV DRDEDGIAST VVLPLPHMFV IKDLVVDMTY FYQQ--YKSI
+                                           KNTLACLYKL -SDSSR--FI HIYPLPHIYV IKDLVPDLTN FYTQ--HKSI
+                                           TNTLACLARI DPEAQ---SS RVYPLPHMYV IKDLVPDLSN FWAQ--YKSI
+                                           DNGLACLTKI SSASS---AS TISPLPHMFV IKDLVVDMTN FYNQ--YKSV
+                                           SNGLACLTPI EPDPKS--ET IISPLPHMYV IKDLVVDMTQ FYSQ--YKSI
+                                           CNGLACLTKI PSGES----S TVTPLPHMFV IKDLVVDMTN FYNQ--YKSI
+                                           CNGLACLTKI QDEAS---ET TITPLPHMFV IKDLVVDMTN FYNQ--YKSI
+                                           CNGLACLTKI ESGSK---ET TITPLPHMFV IKDLVVDMTN FYNQ--YKSI
+                                           KNGLACLTKI EKDAA---QT SVLPLPHMYV IKDLVVDLTN FYQQ--YKSV
+                                           KNALACLTKI EKDAA---QT SVLPLPHMYV IKDLVVDLTN FYQQ--YKSV
+                                           KNGLACLTKM IVDAGE--ET TITPLPHFYV MKDLVVDMTN FYQQ--YKSV
+                                           KTGLACLTKM IVDAGE--ET TITPLPHFYV MKDLVVDMTN FYQQ--YKSV
+
+                                           EPWLKTKRRA SSASEGEATT TRREHLQSPA QRKKLDGLYE CILCACCSTA
+                                           EPWLKRKTKT KTE------- -TTEHAQSPE ERKRLDGLYE CILCACCSAA
+                                           EPWLKARQRP EDG------- --REYRQSPK DRKKLDGLYE CILCACCSTS
+                                           EPWLKTRKPP KDG------- --REHRQSPK DRKKLDGLYE CILCACCTTS
+                                           KPYLQKKEAA K--------- -GQEFYQSKE SRAKLDGLYE CILCACCSTS
+                                           EPFLKTKSDA PAD------- -GKERLQTKE DRAKLDGX-- ----------
+                                           EPWLKTKHQK EDG------- -QREFLQSKE ERAKLDGMWE CILCACCNTS
+                                           EPWLKTKHQK EDG------- -QREFLQSKE ERAKLDGMWE CILCACCNTS
+                                           EPWLKTKKQK EDG------- -QKEFLQTKE ERAKLDGMWE CILCACCNTS
+                                           EPWLKTKTQK EDG------- -QKEFLQTKE ERAKLDGMWE CILCACCNTS
+                                           EPWLKTKKQK EDG------- -QKEFLQTKE ERAKLDGMWE CILCACCNTS
+                                           QPWLQPNRDY SL-------- -QKEFIQSKQ ERSYLDGLYE CILCACCSAS
+                                           KPWLQSDQKP E--------- --REHLQSKE DREKLDGMYE CILCACCSTS
+                                           EPWLKRKDAP PQP------- -GKEIPQTKA DRAKLDGMYE CILCACCSTS
+                                           EPWLKTKKPA PGG------- --KEYLQTKK DRLKLDGMYE CILCACCTTS
+                                           EPWLKRKTPP PTP------- -GKEIPQSKK DRAKLDGMYE CILCACCSTS
+                                           EPWLKRKTPA SVP------- -AKEILQSKK DRAKLDGMYE CILCACCSTS
+                                           EPWLKRKNPA SVP------- -GKEILQSKK DRAKLDGMYE CILCACCSTS
+                                           EPWLKTKTML EAG------- -QKEHLQSKK ERLKLDGMYE CILCACCTSS
+                                           EPWLKTKTML EAG------- -QKEHLQSKK ERLKLDGMYE CILCACCTSS
+                                           EPWLKKKSPP PAG------- -TRELLQSKR DREKLDGMYE CILCACCSSS
+                                           EPWLKKKSPP PGG------- -TREFLQSKH DREKLDGMYE CILCACCSSS
+
+                                           CPSYWWNSEA FLGPAALLHA YRWVSDSRDD YGRERIQSLS EGWDKMYRCR
+                                           CPSYWWNAEA FLGPAALLHA YRWVSDSRDE YAAERVQALA EGWDKLYRCR
+                                           CPSYWWNPEE FPGPAALLHA YRWVCDSRDD FVDERVQALT EGLKSLYRCR
+                                           CPSYWWNPEE FPGPAALLQA YRWISDSRDE YREERLQAIT ESETKVYRCR
+                                           CPSYWWNSDK YLGPAVLLAA YRWIIDSRDD MTSERMKEV- DDAYKLYRCK
+                                           ---------- ---------- ---------- ---------- ----------
+                                           CPSYWWNTPT FPGPAILLQA YKMIADSRDD FAKERMEAL- RGEMKIGRCH
+                                           CPSYWWNTPT FPGPAILLQA YKMIADSRDD FAKERMEAL- RGEMKIGRCH
+                                           CPSYWWNTPT FPGPAILLQA YKMIADSRDD FTKERVEAL- RGEMKIGRCH
+                                           CPSYWWNTPT FPGPAILLQA YKMIADSRDD FTKERVEAL- RGEMKIGRCH
+                                           CPSYWWNTPT FPGPAILLQA YKMIADSRDD FTKERVEAL- RGEMKIGRCH
+                                           CPSYWWNGDR YLGPAILLQA YRWIIDSRDS ATEKRLGYL- NDSYKVYRCH
+                                           CPSYWWNGDK YLGPAVLMQA YRWIADSRDT ATEDRLAYL- EDPFRLYRCH
+                                           CPSYWWNPEE YLGPAALLHA NRWIQDSRDQ FTKERLDSI- NDEFKLYRCH
+                                           CPSYWWNPDK YLGPAALLQA HRWIADSRDE FTKERLEAL- DDPFKLYRCH
+                                           CPSYWWNPES YLGPAALLHA NRWISDSRDE YTKERLDAV- CDEFKLYRCH
+                                           CPSYWWNPES YLGPAALLHA NRWISDSRDE YTKERLEAI- DDEFKLYRCH
+                                           CPSYWWNPES YLGPAALLHA NRWISDSRDE YTKERLEAI- DDEFKLYRCH
+                                           CPSYWWNPEK FLGPAALLHA HRWIADSRDE YTRERLEAI- AGDYKVGRCH
+                                           CPSYWWNPEK FLGPAALLHA HRWIADSRDE YTRERLEAI- AGDYKVGRCH
+                                           CPSYWWNPER FLGPAALLHA HRWIADSRDE YRNERLQSV- EGDYKLYRCH
+                                           CPSYWWNPEK FLGPAALLHA HRWIADSRDE YRNERLQSV- EGDYKLYRCH
+
+                                           MIKSCTATCP KSLDPAAAIS AMKALHQLRK A-------
+                                           MIKSCTATCP KSLDPAAAIS AMKTLHQLGK P-------
+                                           TIKNCTVNCP KSLDPANAIH KMKTRHLVSQ PVELFEGQ
+                                           AIKNCTATCP KGLNPASAIL KMKSKHLLSD PLVRTESV
+                                           TIMNCATVCP KGLNPGKAIN KIKQSLAKGS PV------
+                                           ---------- ---------- ---------- --------
+                                           TIRNCSNACP KGLNPAEKIL QIKGMLG--- --------
+                                           TIRNCSNTCP KGLNPAEKIL QIKGMLG--- --------
+                                           TIRNCSNACP KGLNPAEKIL QIKGMLG--- --------
+                                           TIRNCSNACP KGLNPAEKIL QIKGMLG--- --------
+                                           TIRNCSNACP KGLNPAEKIL QIKGMLG--- --------
+                                           TIMNCTKTCP KHLNPGKAIA NIKILLKGEK RESNS---
+                                           TIMNCTKTCP KGLNPGKAIA SIKKETSLFS --------
+                                           TIKNCTHACP KGLNPAKHID TIKKLQLEA- --------
+                                           TIMNCAKACP KGLNPGLQIA AIKK------ --------
+                                           TILNCARACP KGLNPGKQIA TIKQRHIADA I-------
+                                           TILNCARACP KGLNPGKQIT HIKQLQR--- --------
+                                           TILNCARACP KGLNPGKQIT HIKQLQKSG- --------
+                                           TIRNCENACP KGLSPANQII KIKALQ---- --------
+                                           TIRNCENACP KGLSPANQII KIKALQ---- --------
+                                           TIRNCENACP KSLSPANQII KIKGLMHN-- --------
+                                           TIRNCENACP KSLSPANQII KIKGL----- --------
